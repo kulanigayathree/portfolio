@@ -14,16 +14,16 @@ export const About = () => {
           <div className="md:w-1/2">
             <h3 className="text-2xl font-bold mb-4">My Story</h3>
             <p className="text-gray-600 mb-6">
-              I'm a passionate frontend developer with 5 years of experience
-              creating elegant solutions in the digital world. My journey in web
-              development started when I built my first HTML page in college,
-              and I've been hooked ever since.
+              I'm a passionate tech enthusiast currently pursuing my degree at SLIIT, 
+              with a growing interest in the world of data science. 
+              My journey began when I created a simple web project at university, 
+              which sparked my curiosity in combining coding with real-world problem solving.
             </p>
             <p className="text-gray-600 mb-8">
-              I specialize in building responsive, accessible, and performant
-              web applications using modern technologies like React, TypeScript,
-              and Tailwind CSS. I'm dedicated to writing clean code and creating
-              intuitive user experiences.
+              Since then, I’ve been exploring data-driven tools like 
+              Power BI, SQL, and R — discovering how data can be transformed into meaningful insights.
+              While I’ve dabbled in frontend development using tools like React and Tailwind CSS,
+              my true focus is finding a career path where data meets creativity and impact.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="bg-gray-50 p-4 rounded-lg">

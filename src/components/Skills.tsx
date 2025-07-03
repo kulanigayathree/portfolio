@@ -14,40 +14,41 @@ export const Skills = () => {
     level: 95
   }, {
     name: 'Tailwind CSS',
-    level: 85
+    level: 60
   }];
   const backendSkills = [{
     name: 'Node.js',
-    level: 75
+    level: 60
   }, {
     name: 'Express',
-    level: 70
+    level: 65
   }, {
     name: 'MongoDB',
-    level: 65
-  }, {
-    name: 'Firebase',
-    level: 80
-  }, {
-    name: 'REST API',
+    level: 75
+  },];
+  const dataSkills = [
+  {
+    name: 'R',
+    level: 70
+  },
+  {
+    name: 'SQL',
     level: 85
-  }];
+  }
+];
   const toolsSkills = [{
     name: 'Git',
-    level: 90
-  }, {
-    name: 'Webpack',
     level: 75
   }, {
-    name: 'Jest',
-    level: 70
+    name: 'Android Studio',
+    level: 50
+  }, {
+    name: 'Power BI',
+    level: 80
   }, {
     name: 'Figma',
-    level: 65
-  }, {
-    name: 'Docker',
-    level: 60
-  }];
+    level: 80
+  },];
   const SkillBar = ({
     name,
     level
@@ -83,6 +84,12 @@ export const Skills = () => {
           <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
             <h3 className="text-xl font-bold mb-6 text-center">Backend</h3>
             {backendSkills.map((skill, index) => <SkillBar key={index} name={skill.name} level={skill.level} />)}
+          </div>
+           <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-bold mb-6 text-center">Data Skills</h3>
+            {dataSkills.map((skill, index) => (
+              <SkillBar key={index} name={skill.name} level={skill.level} />
+            ))}
           </div>
           <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
             <h3 className="text-xl font-bold mb-6 text-center">

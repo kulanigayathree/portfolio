@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Mail, Twitter } from 'lucide-react';
+import { Linkedin, Mail, Github} from 'lucide-react';
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-gray-900 text-white py-12">
@@ -14,23 +14,17 @@ export const Footer = () => {
             </p>
           </div>
           <div className="flex gap-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-              <div size={20} />
+            <a href="https://github.com/kulanigayathree" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="www.linkedin.com/in/kulani-gayathree-19174a278" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={20} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-              <Twitter size={20} />
-            </a>
-            <a href="mailto:hello@example.com" className="text-gray-400 hover:text-white transition-colors">
-              <Mail size={20} />
             </a>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} John Doe. All rights reserved.
+            &copy; {currentYear} Kulani Gayathree. All rights reserved.
           </p>
           <nav className="flex gap-6">
             <a href="#home" className="text-gray-400 hover:text-white text-sm transition-colors">
