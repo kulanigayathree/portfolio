@@ -1,5 +1,6 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { Github, ExternalLink } from 'lucide-react';
+import { SiFigma } from 'react-icons/si'; // ✅ added Figma icon from react-icons
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -7,6 +8,7 @@ interface ProjectCardProps {
   tags: string[];
   liveLink?: string;
   githubLink?: string;
+   figmaLink?: string; // ✅ new line
 }
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
@@ -14,7 +16,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   tags,
   liveLink,
-  githubLink
+  githubLink,
+   figmaLink // ✅ new
 }) => {
   return <div className="bg-white rounded-xl shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg">
       <div className="h-48 overflow-hidden">
@@ -30,11 +33,23 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <div className="flex gap-3">
           {githubLink && <a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 flex items-center gap-1 text-sm">
-              <div size={16} /> Code
+              <Github  size={16} /> Code
             </a>}
           {liveLink && <a href={liveLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 flex items-center gap-1 text-sm">
-              <ExternalLink size={16} /> Live Demo
+              <ExternalLink size={16} /> visit
             </a>}
+
+            {figmaLink && (
+    <a
+      href={figmaLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-600 hover:text-blue-600 flex items-center gap-1 text-sm"
+    >
+      <SiFigma size={16} />Figma
+    </a>
+
+  )}
         </div>
       </div>
     </div>;

@@ -1,6 +1,6 @@
 import React from 'react';
 import profilePic from '../assets/images/profile.jpg';  // adjust path if needed
-import { ArrowRight, Linkedin, Github } from 'lucide-react';
+import { ArrowRight, Linkedin, Github, Download } from 'lucide-react';
 export const Hero = () => {
   return <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,12 +23,27 @@ export const Hero = () => {
               <a href="#projects" className="px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
                 View My Work
               </a>
+              
+              <button
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/portfolio/KulaniGayathree_CV.pdf';
+                  link.download = 'KulaniGayathree_CV.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="px-6 py-3 border border-gray-300 bg-gray-50 text-black font-medium rounded-full hover:bg-blue-100 transition-colors flex items-center gap-2"
+>
+                 <Download size={20} /> Resume
+               </button>
+              
             </div>
             <div className="flex gap-4 mt-8">
               <a href="https://github.com/kulanigayathree" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Github size={24} />
               </a>
-              <a href="www.linkedin.com/in/kulani-gayathree-19174a278" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/in/kulani-gayathree-19174a278" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Linkedin size={24} />
               </a>
             </div>

@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
 import { ProjectCard } from './ProjectCard';
+import simpleChatbotImage from '../assets/images/simple_chatbot.jpg';
+import portfolioImage from '../assets/images/portfolio.jpg'; // ✅ your image import
+import jsonchatbotImage from '../assets/images/json_chatbot.jpg';
+import zenityImage from '../assets/images/zenity.jpg';
+
 export const Projects = () => {
   const projects = [  {
-    title: 'Simple Chatbot',
-    description: 'A smart little chatbot that chats, helps, and keeps it simple.',
-    image: 'https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80',
-    tags: ['Python'],
-    githubLink: 'https://github.com/kulanigayathree/Simple-chatbot-python-1'
-  }, {
     title: 'Portfolio Website',
     description: 'Personal portfolio website showcasing projects and skills (this website).',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    image: portfolioImage,
     tags: ['React', 'Tailwind CSS', 'vite'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/kulanigayathree/portfolio'
+  }, {
+    title: 'Simple Chatbot',
+    description: 'A smart little chatbot that chats, helps, and keeps it simple.',
+    image: simpleChatbotImage,
+    tags: ['Python'],
+    githubLink: 'https://github.com/kulanigayathree/Simple-chatbot-python-1'
+  },{
+    title: 'json Chatbot',
+    description: 'A smart little chatbot powered by JSON, turning simple data into friendly conversations.',
+    image: jsonchatbotImage,
+    tags: ['Python'],
+    githubLink: 'https://github.com/kulanigayathree/json_chatbot-python'
+  },{
+    title: 'Zenity',
+    description: 'StressRelief Mobile App Design',
+    image: zenityImage,
+    tags: ['figma'],
+    figmaLink: 'https://www.figma.com/design/G7nkttyGtzkhLJjOkuva9l/ZENITY?node-id=0-1'
   }];
-  return <section id="projects" className="py-16 md:py-24 bg-gray-50">
+ 
+ return <section id="projects" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
