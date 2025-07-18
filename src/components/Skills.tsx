@@ -33,7 +33,7 @@ export const Skills = () => {
   },
   {
     name: 'SQL',
-    level: 85
+    level: 90
   }
 ];
   const toolsSkills = [{
@@ -44,7 +44,7 @@ export const Skills = () => {
     level: 50
   }, {
     name: 'Power BI',
-    level: 80
+    level: 40
   }, {
     name: 'Figma',
     level: 80
@@ -61,37 +61,46 @@ export const Skills = () => {
         <span className="text-sm font-medium text-gray-500">{level}%</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2.5">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{
+        <div className="bg-[#1f7a8c] h-2.5 rounded-full" style={{
         width: `${level}%`
       }}></div>
       </div>
     </div>;
   return <section id="skills" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#022b3a]">My Skills</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             I've worked with a variety of technologies in the web development
             world. Here's a breakdown of my technical skills.
           </p>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+          <div className="w-20 h-1 bg-[#1f7a8c] mx-auto mt-4"></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm 
+          transition duration-300 ease-in-out hover:shadow-lg hover:opacity-90 
+          transition duration-500 ease-in-out transform hover:rotate-1 hover:scale-105">
             <h3 className="text-xl font-bold mb-6 text-center">Frontend</h3>
             {frontendSkills.map((skill, index) => <SkillBar key={index} name={skill.name} level={skill.level} />)}
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm  
+          transition duration-300 ease-in-out hover:shadow-lg hover:opacity-90 
+          transition duration-500 ease-in-out transform hover:rotate-1 hover:scale-105">
             <h3 className="text-xl font-bold mb-6 text-center">Backend</h3>
             {backendSkills.map((skill, index) => <SkillBar key={index} name={skill.name} level={skill.level} />)}
           </div>
-           <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+           <div className="bg-gray-50 p-6 rounded-lg shadow-sm 
+            transition duration-300 ease-in-out hover:shadow-lg hover:opacity-90 
+            transition duration-500 ease-in-out transform hover:rotate-1 hover:scale-105">
             <h3 className="text-xl font-bold mb-6 text-center">Data Skills</h3>
             {dataSkills.map((skill, index) => (
               <SkillBar key={index} name={skill.name} level={skill.level} />
             ))}
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm
+          transition duration-300 ease-in-out hover:shadow-lg hover:opacity-90 
+          transition duration-500 ease-in-out transform hover:rotate-1 hover:scale-105">
             <h3 className="text-xl font-bold mb-6 text-center">
               Tools & Others
             </h3>

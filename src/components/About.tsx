@@ -1,72 +1,123 @@
 import React from 'react';
-import { Code, Brain, Users } from 'lucide-react';
-import aboutImage from '../assets/images/about_us.jpg'; // ✅ New import
+import { Code, Brain, Users, GraduationCap, Award, BookOpen } from 'lucide-react';
 
 export const About = () => {
-  return <section id="about" className="py-16 md:py-24 bg-white">
+  return (
+    <section id="about" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#022b3a]">About Me</h2>
+          <div className="w-20 h-1 bg-[#1f7a8c] mx-auto"></div>
         </div>
-        <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-1/2">
-            <img src={aboutImage} alt="About me" className="rounded-lg shadow-lg w-full h-auto object-cover" /> {/* ✅ Changed here */}
+        
+        
+         
+          
+          
+          
+        
+
+        {/* Education Section */}
+        <div className="bg-gray-50 py-12 px-8 rounded-lg">
+          <h3 className="text-2xl font-bold text-center mb-8">Education & Achievements</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* University Details */}
+            <div className="bg-white p-6 rounded-lg shadow-md 
+            transition transform hover:scale-105 hover:shadow-xl cursor-pointer">
+              <div className="flex items-center mb-4">
+                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <GraduationCap className="text-blue-600" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">University Education</h4>
+                  <p className="text-gray-600">Current Studies</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-gray-700">
+                  <strong>Institution:</strong> Sri Lanka Institute of Information Technology (SLIIT)
+                </p>
+                <p className="text-gray-700">
+                  <strong>Degree:</strong> BSc (HONS) Information Technology
+                </p>
+                <p className="text-gray-700">
+                  <strong>Expected Graduation:</strong> 2027
+                </p>
+                <p className="text-gray-700">
+                  <strong>GPA:</strong> 3.1
+                </p>
+              </div>
+            </div>
+
+            {/* A-Level Results */}
+            <div className="bg-white p-6 rounded-lg shadow-md 
+            transition transform hover:scale-105 hover:shadow-xl cursor-pointer">
+              <div className="flex items-center mb-4">
+                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <BookOpen className="text-green-600" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg">Advanced Level</h4>
+                  <p className="text-gray-600">Academic Foundation</p>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <p className="text-gray-700">
+                  <strong>Stream:</strong> Physical Science
+                </p>
+                <p className="text-gray-700">
+                  <strong>Results:</strong>
+                </p>
+                <ul className="text-gray-700 ml-4 space-y-1">
+                  <li>• Combined Maths: C</li>
+                  <li>• Physics: C</li>
+                  <li>• Chemistry: C</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold mb-4">My Story</h3>
-             
-             <p className="text-gray-600 mb-6">
-              <strong>Where curiosity meets code and data tells a story.</strong>
-            </p>
-           
-            <p className="text-gray-600 mb-6">
-              I'm a passionate tech enthusiast currently pursuing my degree at SLIIT, 
-              with a growing interest in the world of data science. 
-              My journey began when I created a simple web project at university, 
-              which sparked my curiosity in combining coding with real-world problem solving.
-            </p>
-           
-            <p className="text-gray-600 mb-8">
-              Since then, I’ve been exploring data-driven tools like 
-              Power BI, SQL, and R — discovering how data can be transformed into meaningful insights.
-              While I’ve dabbled in frontend development using tools like React and Tailwind CSS,
-              my true focus is finding a career path where data meets creativity and impact.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Code className="text-blue-600" />
+
+          {/* Certificates Section */}
+          <div className="mt-8 flex justify-center ">
+            <div className="bg-white p-6 rounded-lg shadow-md 
+          transition transform hover:scale-105 hover:shadow-xl cursor-pointer
+            ">
+              <div className="flex items-center mb-4">
+                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                  <Award className="text-purple-600" />
                 </div>
-                <h4 className="font-bold mb-2">Analytical Thinker</h4>
-                <p className="text-sm text-gray-600">
-                  I love diving into data to find the “why” behind the numbers.
-                </p>
+                <div>
+                  <h4 className="font-bold text-lg">Certifications & Achievements</h4>
+                  <p className="text-gray-600">Professional Development</p>
+                </div>
               </div>
-             
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Brain className="text-blue-600" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <h5 className="font-semibold text-gray-800">Discovering data</h5>
+                  <ul className="text-gray-700 space-y-1">
+                    <li>• Visualize Your Data - Sololearn</li>
+                    <li>• Coding for Data - Sololearn</li>
+                    <li>• Introduction to Data Science - Cisco Networking Academy</li>
+                  </ul>
                 </div>
-                <h4 className="font-bold mb-2">Creative Developer</h4>
-                <p className="text-sm text-gray-600">
-                   Merging design with logic through clean, user-friendly code.
-                </p>
-              </div>
-            
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Users className="text-blue-600" />
+
+                <div className="space-y-2">
+                  <h5 className="font-semibold text-gray-800">Other</h5>
+                  <ul className="text-gray-700 space-y-1">
+                    <li>• Introduction to C - Sololearn</li>
+                    <li>• Introduncion to C++ - Sololearn</li>
+                    <li>• Introduction to Java - Sololearn</li>
+                    <li>• Prompt Engineering - Sololearn</li>
+                    <li>• Introduction to Modern AI - Cisco Networking Academy</li>
+                  </ul>
                 </div>
-                <h4 className="font-bold mb-2"> Team Collaborator</h4>
-                <p className="text-sm text-gray-600">
-                  Strong communication and teamwork are core to how I work.
-                </p>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

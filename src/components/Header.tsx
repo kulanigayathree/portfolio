@@ -34,13 +34,13 @@ export const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#home" className="text-2xl font-bold text-blue-600">
+            <a href="#home" className="text-2xl font-bold text-[#022b3a]">
               Portfolio
             </a>
           </div>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-10">
-            {navItems.map(item => <a key={item.name} href={item.href} className="font-medium text-gray-600 hover:text-blue-600 transition-colors">
+            {navItems.map(item => <a key={item.name} href={item.href} className="font-medium text-gray-900 hover:text-[#1f7a8c] transition-colors">
                 {item.name}
               </a>)}
           </nav>

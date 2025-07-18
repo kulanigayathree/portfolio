@@ -27,15 +27,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-600 text-sm mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
-          {tags.map((tag, index) => <span key={index} className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
+          {tags.map((tag, index) => <span key={index} className="text-xs bg-[#bfdbf7] text-[#1f7a8c] px-2 py-1 rounded-full">
               {tag}
             </span>)}
         </div>
         <div className="flex gap-3">
-          {githubLink && <a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 flex items-center gap-1 text-sm">
+          {githubLink && <a href={githubLink} target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-[#1f7a8c] flex items-center gap-1 text-sm">
               <Github  size={16} /> Code
             </a>}
-          {liveLink && <a href={liveLink} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 flex items-center gap-1 text-sm">
+          {liveLink && <a href={liveLink} target="_blank" rel="noopener noreferrer" className="text-gray-800 hover:text-[#1f7a8c] flex items-center gap-1 text-sm">
               <ExternalLink size={16} /> visit
             </a>}
 
@@ -44,7 +44,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       href={figmaLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-gray-600 hover:text-blue-600 flex items-center gap-1 text-sm"
+      className="text-gray-800 hover:text-[#1f7a8c] flex items-center gap-1 text-sm"
     >
       <SiFigma size={16} />Figma
     </a>

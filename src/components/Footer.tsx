@@ -2,7 +2,7 @@ import React from 'react';
 import { Linkedin, Mail, Github} from 'lucide-react';
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-900 text-white py-12">
+  return <footer className="bg-[#022b3a] text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
