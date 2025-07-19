@@ -30,7 +30,8 @@ export const Projects = () => {
     description: 'StressRelief Mobile App Design',
     image: zenityImage,
     tags: ['figma'],
-    figmaLink: 'https://www.figma.com/design/G7nkttyGtzkhLJjOkuva9l/ZENITY?node-id=0-1'
+    figmaLink: 'https://www.figma.com/design/G7nkttyGtzkhLJjOkuva9l/ZENITY?node-id=0-1',
+    githubLink: 'https://github.com/kulanigayathree/Figma-StressRelief/blob/main/ZENITY.fig'
   }];
  
  return <section id="projects" className="py-16 md:py-24 bg-gray-50">
