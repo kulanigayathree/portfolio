@@ -55,7 +55,7 @@ export const Header = () => {
       {/* Mobile Navigation */}
       {isOpen && <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
-            {navItems.map(item => <a key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50" onClick={() => setIsOpen(false)}>
+            {navItems.map(item => <a key={item.name} href={item.href} className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#022b3a] hover:bg-gray-50" onClick={() => setIsOpen(false)}>
                 {item.name}
               </a>)}
           </div>

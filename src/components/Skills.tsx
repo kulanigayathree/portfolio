@@ -70,12 +70,12 @@ export const Skills = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#022b3a]">My Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#1f7a8c]">My Skills</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             I've worked with a variety of technologies in the web development
             world. Here's a breakdown of my technical skills.
           </p>
-          <div className="w-20 h-1 bg-[#1f7a8c] mx-auto mt-4"></div>
+          <div className="w-20 h-1 bg-[#022b3a] mx-auto mt-4"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gray-50 p-6 rounded-lg shadow-sm 
