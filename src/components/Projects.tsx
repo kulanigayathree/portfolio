@@ -20,10 +20,11 @@ export const Projects = () => {
     tags: ['Python'],
     githubLink: 'https://github.com/kulanigayathree/Simple-chatbot-python-1'
   },{
-    title: 'json Chatbot',
-    description: 'A smart little chatbot powered by JSON, turning simple data into friendly conversations.',
+    title: 'Soren',
+    description: 'A smart little CHATBOT powered by JSON, turning simple data into friendly conversations.',
     image: jsonchatbotImage,
     tags: ['Python'],
+    liveLink: 'http://127.0.0.1:5000/',
     githubLink: 'https://github.com/kulanigayathree/json_chatbot-python'
   },{
     title: 'Zenity',
