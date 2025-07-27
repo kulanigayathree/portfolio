@@ -7,25 +7,26 @@ import zenityImage from '../assets/images/zenity.jpg';
 
 export const Projects = () => {
   const projects = [  {
-    title: 'Portfolio Website',
+    title: 'Portfolio',
     description: 'Personal portfolio website showcasing projects and skills (this website).',
     image: portfolioImage,
     tags: ['React', 'Tailwind CSS', 'vite'],
     liveLink: 'https://example.com',
     githubLink: 'https://github.com/kulanigayathree/portfolio'
-  }, {
-    title: 'Simple Chatbot',
-    description: 'A smart little chatbot that chats, helps, and keeps it simple.',
-    image: simpleChatbotImage,
-    tags: ['Python'],
-    githubLink: 'https://github.com/kulanigayathree/Simple-chatbot-python-1'
   },{
     title: 'Soren',
     description: 'A smart little CHATBOT powered by JSON, turning simple data into friendly conversations.',
     image: jsonchatbotImage,
-    tags: ['Python'],
+    tags: ['Python','HTML','CSS'],
     liveLink: 'http://127.0.0.1:5000/',
     githubLink: 'https://github.com/kulanigayathree/json_chatbot-python'
+  }, {
+    title: 'Simple Chatbot',
+    description: 'A smart little chatbot that chats, helps, and keeps it simple.',
+    image: simpleChatbotImage,
+    tags: ['Python', 'JavaScript' , 'HTML','CSS'],
+    liveLink: 'http://127.0.0.1:5000/',
+    githubLink: 'https://github.com/kulanigayathree/Simple-chatbot-python-1'
   },{
     title: 'Zenity',
     description: 'StressRelief Mobile App Design',
