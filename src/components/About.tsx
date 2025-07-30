@@ -164,20 +164,20 @@ export const About = () => {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-lg border border-blue-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
               <div className="flex items-center mb-4">
                 <Code className="text-blue-600 mr-2" size={20} />
-                <h5 className="font-bold text-gray-800">Web Development</h5>
+                <h5 className="font-bold text-gray-800">Programming Languages</h5>
               </div>
               <ul className="text-gray-700 space-y-2 text-sm">
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">▪</span>
-                  React.js Fundamentals
+                  Introduction to C – Sololearn
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">▪</span>
-                  JavaScript ES6+ Features
+                  Introduction to C++ – Sololearn
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-500 mr-2">▪</span>
-                  Responsive Web Design
+                  Introduction to Java – Sololearn
                 </li>
               </ul>
             </div>
@@ -186,20 +186,28 @@ export const About = () => {
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-lg border border-green-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
               <div className="flex items-center mb-4">
                 <Brain className="text-green-600 mr-2" size={20} />
-                <h5 className="font-bold text-gray-800">Data Science</h5>
+                <h5 className="font-bold text-gray-800">Data Science & AI</h5>
               </div>
               <ul className="text-gray-700 space-y-2 text-sm">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">▪</span>
-                  Statistical Analysis with R
+                  Introduction to Data Science – Cisco Networking Academy
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">▪</span>
-                  Data Visualization
+                  Visualize Your Data – Sololearn
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-2">▪</span>
-                  SQL Database Management
+                  Coding for Data – Sololearn
+                </li>
+                 <li className="flex items-start">
+                  <span className="text-green-500 mr-2">▪</span>
+                  Introduction to Modern AI – Cisco Networking Academy
+                </li>
+                 <li className="flex items-start">
+                  <span className="text-green-500 mr-2">▪</span>
+                  Prompt Engineering – Sololearn
                 </li>
               </ul>
             </div>
