@@ -1,7 +1,54 @@
-import React from 'react';
-import { Code, Brain, Users, GraduationCap, Award, BookOpen, Target, Heart, Lightbulb } from 'lucide-react';
+import React, { useState } from 'react';
+import { Code, Brain, Users, GraduationCap, Award, BookOpen, Target, Heart, Lightbulb, X, Eye } from 'lucide-react';
 
 export const About = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
+  // Certificate data - using correct paths for public folder
+  const certificates = {
+    programming: [
+      { name: 'Introduction to C – Sololearn', image: './certificates/IntroC_Sololern.png' },
+      { name: 'Introduction to C++ – Sololearn', image: './certificates/IntroC++_Sololearn.png' },
+      { name: 'Introduction to Java – Sololearn', image: './certificates/IntroJava_Sololearn.png' }
+    ],
+    dataScience: [
+      { name: 'Introduction to Data Science – Cisco Networking Academy', image: './certificates/data-science-certificate.png' },
+      { name: 'Visualize Your Data – Sololearn', image: './certificates/Visualize_your_data_Sololearn.png' },
+      { name: 'Coding for Data – Sololearn', image: './certificates/Coding_for_Data_Sololearn.png' },
+      { name: 'Introduction to Modern AI – Cisco Networking Academy', image: './certificates/IntroMorden_AI_CNA.png' },
+      { name: 'Prompt Engineering – Sololearn', image: './certificates/Prompt_Engineering_Sololearn.png' }
+    ]
+  };
+
+  const openCertificate = (cert) => {
+    setSelectedCertificate(cert);
+  };
+
+  const closeCertificate = () => {
+    setSelectedCertificate(null);
+  };
+
+  // Handle escape key to close modal
+  React.useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        closeCertificate();
+      }
+    };
+
+    if (selectedCertificate) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedCertificate]);
+
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,59 +207,65 @@ export const About = () => {
           {/* 4 Column Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            {/* Box 1 - Web Development */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-lg border border-blue-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <div className="flex items-center mb-4">
-                <Code className="text-blue-600 mr-2" size={20} />
-                <h5 className="font-bold text-gray-800">Programming Languages</h5>
+            {/* Box 1 - Programming Languages with Certificate Viewer */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-lg border border-blue-200 hover:shadow-lg transition-all duration-300 hover:scale-105 relative">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                  <Code className="text-blue-600 mr-2" size={20} />
+                  <h5 className="font-bold text-gray-800">Programming Languages</h5>
+                </div>
+                <div className="bg-blue-200 p-1 rounded-full">
+                  <Eye className="text-blue-600" size={16} />
+                </div>
               </div>
               <ul className="text-gray-700 space-y-2 text-sm">
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">▪</span>
-                  Introduction to C – Sololearn
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">▪</span>
-                  Introduction to C++ – Sololearn
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-500 mr-2">▪</span>
-                  Introduction to Java – Sololearn
-                </li>
+                {certificates.programming.map((cert, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-500 mr-2">▪</span>
+                    <button
+                      onClick={() => openCertificate(cert)}
+                      className="text-left hover:text-blue-600 hover:underline transition-colors cursor-pointer"
+                    >
+                      {cert.name}
+                    </button>
+                  </li>
+                ))}
               </ul>
+              <div className="mt-3 text-xs text-blue-600 font-medium">
+                Click certificates to view full size
+              </div>
             </div>
             
-            {/* Box 2 - Data Science */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-lg border border-green-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <div className="flex items-center mb-4">
-                <Brain className="text-green-600 mr-2" size={20} />
-                <h5 className="font-bold text-gray-800">Data Science & AI</h5>
+            {/* Box 2 - Data Science & AI with Certificate Viewer */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-lg border border-green-200 hover:shadow-lg transition-all duration-300 hover:scale-105 relative">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                  <Brain className="text-green-600 mr-2" size={20} />
+                  <h5 className="font-bold text-gray-800">Data Science & AI</h5>
+                </div>
+                <div className="bg-green-200 p-1 rounded-full">
+                  <Eye className="text-green-600" size={16} />
+                </div>
               </div>
               <ul className="text-gray-700 space-y-2 text-sm">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">▪</span>
-                  Introduction to Data Science – Cisco Networking Academy
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">▪</span>
-                  Visualize Your Data – Sololearn
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-2">▪</span>
-                  Coding for Data – Sololearn
-                </li>
-                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2">▪</span>
-                  Introduction to Modern AI – Cisco Networking Academy
-                </li>
-                 <li className="flex items-start">
-                  <span className="text-green-500 mr-2">▪</span>
-                  Prompt Engineering – Sololearn
-                </li>
+                {certificates.dataScience.map((cert, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-green-500 mr-2">▪</span>
+                    <button
+                      onClick={() => openCertificate(cert)}
+                      className="text-left hover:text-green-600 hover:underline transition-colors cursor-pointer"
+                    >
+                      {cert.name}
+                    </button>
+                  </li>
+                ))}
               </ul>
+              <div className="mt-3 text-xs text-green-600 font-medium">
+                Click certificates to view full size
+              </div>
             </div>
             
-            {/* Box 3 - Academic Courses */}
+            {/* Box 3 - Academic Projects (unchanged) */}
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-lg border border-purple-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
               <div className="flex items-center mb-4">
                 <GraduationCap className="text-purple-600 mr-2" size={20} />
@@ -234,7 +287,7 @@ export const About = () => {
               </ul>
             </div>
             
-            {/* Box 4 - Personal Development */}
+            {/* Box 4 - Personal Development (unchanged) */}
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-5 rounded-lg border border-orange-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
               <div className="flex items-center mb-4">
                 <Target className="text-orange-600 mr-2" size={20} />
@@ -261,13 +314,60 @@ export const About = () => {
           <div className="mt-8 p-6 bg-gradient-to-r from-[#bfdbf7] to-indigo-50 rounded-lg">
             <h4 className="font-bold text-lg text-[#022b3a] mb-3 text-center">Looking Ahead</h4>
             <p className="text-gray-700 text-center max-w-3xl mx-auto">
-              My goal is to leverage my growing expertise in data science and software development to contribute to innovative projects 
-              that solve real-world problems. I'm particularly interested in opportunities where I can apply machine learning and 
-              data analysis to drive business insights and create meaningful impact.
+              I aim to apply my expertise in data science and software development to create innovative 
+              solutions for real world challenges. I’m especially interested in using machine learning and 
+              data analytics to deliver valuable insights and drive impactful outcomes.
             </p>
           </div>
         </div>
       </div>
+
+      {/* Certificate Modal */}
+      {selectedCertificate && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={closeCertificate}
+        >
+          <div 
+            className="relative max-w-4xl max-h-full bg-white rounded-lg shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-4 bg-gray-50 border-b">
+              <h3 className="text-lg font-semibold text-gray-800 truncate pr-4">
+                {selectedCertificate.name}
+              </h3>
+              <button
+                onClick={closeCertificate}
+                className="text-gray-400 hover:text-gray-600 transition-colors p-1 rounded-full hover:bg-gray-200"
+                aria-label="Close certificate viewer"
+              >
+                <X size={24} />
+              </button>
+            </div>
+            
+            {/* Certificate Image */}
+            <div className="p-4">
+              <img
+                src={selectedCertificate.image}
+                alt={`${selectedCertificate.name} Certificate`}
+                className="w-full h-auto max-h-[70vh] object-contain rounded-lg shadow-md"
+                onError={(e) => {
+                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xNzUgMTIwSDIyNVYxODBIMTc1VjEyMFoiIGZpbGw9IiM5Q0EzQUYiLz4KPHN0cm9rZSB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiM2QjcyODAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNHB4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIyMDAiIHk9IjIxMCI+Q2VydGlmaWNhdGUgbm90IGZvdW5kPC90ZXh0PgoKPC9zdmc+';
+                  e.target.alt = 'Certificate image not found';
+                }}
+              />
+            </div>
+            
+            {/* Modal Footer */}
+            <div className="p-4 bg-gray-50 border-t text-center">
+              <p className="text-sm text-gray-600">
+                Press <kbd className="px-2 py-1 bg-gray-200 rounded text-xs">Esc</kbd> or click outside to close
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

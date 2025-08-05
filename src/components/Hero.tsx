@@ -34,7 +34,7 @@ export const Hero = () => {
             
             {/* Subtitle with typing animation effect */}
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-700 mb-2">
-              IT Undergraduate
+              IT Undergraduate & Data Science Enthusiast 
             </h2>
             
             {/* Location */}
