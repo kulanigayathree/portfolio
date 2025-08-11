@@ -306,6 +306,22 @@ export const About = () => {
                   <span className="text-orange-500 mr-2">▪</span>
                   Self-Directed Learning
                 </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">▪</span>
+                  Curiosity & Continuous Improvement
+                </li>
+                 <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">▪</span>
+                  Adaptability & Flexibility
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">▪</span>
+                  Documentation Skills
+                </li>
+                <li className="flex items-start">
+                  <span className="text-orange-500 mr-2">▪</span>
+                  Resilience & Patience
+                </li>
               </ul>
             </div>
           </div>

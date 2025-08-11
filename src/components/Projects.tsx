@@ -4,7 +4,8 @@ import simpleChatbotImage from '../assets/images/simple_chatbot.jpg';
 import portfolioImage from '../assets/images/portfolio.jpg';
 import jsonchatbotImage from '../assets/images/json_chatbot.jpg';
 import zenityImage from '../assets/images/zenity.jpg';
-import { Filter, Code, Palette, Brain, Globe } from 'lucide-react';
+import WeatherPipelineImage from '../assets/images/Weather Pipeline.jpg';
+import { Filter, Code, Palette, Brain, Globe, TrendingUp} from 'lucide-react';
 
 export const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -49,12 +50,22 @@ export const Projects = () => {
       figmaLink: 'https://www.figma.com/design/G7nkttyGtzkhLJjOkuva9l/ZENITY?node-id=0-1',
       githubLink: 'https://github.com/kulanigayathree/Figma-StressRelief/blob/main/ZENITY.fig',
       status: 'Design Complete'
+    },
+    {
+      title: 'Weather Pipeline (Test API)',
+      description: 'A small project demonstrating a basic data pipeline that fetches weather data (or mock data), stores it in a SQLite database, and runs queries for analysis. Perfect for learning how to build an end-to-end data ingestion and storage pipeline using Python.',
+      image: WeatherPipelineImage,
+      tags: ['Python 3', 'Requests', 'Pandas', 'SQLite3', 'python-dotenv', 'Logging'],
+      category: 'Data Science',
+      githubLink: 'https://github.com/kulanigayathree/weather-pipeline-demo',
+      status: 'Complete'
     }
   ];
 
   const categories = [
     { name: 'All', icon: <Filter size={16} />, count: projects.length },
     { name: 'Web Development', icon: <Globe size={16} />, count: projects.filter(p => p.category === 'Web Development').length },
+    { name: 'Data Science', icon: <TrendingUp size={16} />, count: projects.filter(p => p.category === 'Data Science').length },
     { name: 'AI/ML', icon: <Brain size={16} />, count: projects.filter(p => p.category === 'AI/ML').length },
     { name: 'Design', icon: <Palette size={16} />, count: projects.filter(p => p.category === 'Design').length }
   ];

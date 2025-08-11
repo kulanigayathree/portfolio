@@ -94,10 +94,10 @@ export const Skills = () => {
   };
 
   const currentlyLearning = [
-    { name: 'Next.js', icon: '▲', status: 'In Progress' },
+    { name: 'Python', icon: '🐍', status: 'Improving' },
     { name: 'Docker', icon: '🐳', status: 'Exploring' },
     { name: 'AWS', icon: '☁️', status: 'Learning' },
-    { name: 'Python', icon: '🐍', status: 'Improving' }
+    { name: 'Pandas', icon: '🐼', status: 'Learning' }
   ];
 
   return (
