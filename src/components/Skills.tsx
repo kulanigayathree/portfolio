@@ -38,6 +38,7 @@ export const Skills = () => {
       color: 'bg-[#022b3a]',
       bgColor: 'from-gray-100 to-gray-50',
       skills: [
+        { name: 'Python', icon: '🐍', level: 'Intermediate', experience: '1+ year' },
         { name: 'Node.js', icon: '🟢', level: 'Intermediate', experience: '1+ year' },
         { name: 'Express.js', icon: '⚡', level: 'Intermediate', experience: '1+ year' },
         { name: 'MongoDB', icon: '🍃', level: 'Intermediate', experience: '1+ year' }
@@ -51,7 +52,8 @@ export const Skills = () => {
       skills: [
         { name: 'R Programming', icon: '📊', level: 'Intermediate', experience: '1+ year' },
         { name: 'SQL', icon: '🗄️', level: 'Advanced', experience: '2+ years' },
-        { name: 'Power BI', icon: '📈', level: 'Beginner', experience: '6+ months' }
+        { name: 'Power BI', icon: '📈', level: 'Advanced', experience: '8+ months' },
+        { name: 'Pandas', icon: '🐼', level: 'Intermediate', experience: '6+ months' }
       ]
     },
     {
@@ -62,7 +64,7 @@ export const Skills = () => {
       skills: [
         { name: 'Git & GitHub', icon: '🔀', level: 'Intermediate', experience: '2+ years' },
         { name: 'Android Studio', icon: '🤖', level: 'Beginner', experience: '6+ months' },
-        { name: 'Figma', icon: '🎨', level: 'Intermediate', experience: '1+ year' },
+        { name: 'Figma', icon: '🎨', level: 'Advanced', experience: '1+ year' },
         { name: 'VS Code', icon: '💻', level: 'Advanced', experience: '3+ years' }
       ]
     }
@@ -97,7 +99,7 @@ export const Skills = () => {
     { name: 'Python', icon: '🐍', status: 'Improving' },
     { name: 'Docker', icon: '🐳', status: 'Exploring' },
     { name: 'AWS', icon: '☁️', status: 'Learning' },
-    { name: 'Pandas', icon: '🐼', status: 'Learning' }
+    { name: 'ML & AI', icon: '🤖', status: 'Exploring' }
   ];
 
   return (
@@ -253,8 +255,15 @@ export const Skills = () => {
           </div>
           
           <div className="text-center mt-8">
+            <p className="text-lg text-gray-600">
+              <strong>Next Goals</strong>
+            </p>
             <p className="text-sm text-gray-600">
-              <strong>Next Goals:</strong> Machine Learning fundamentals, Cloud deployment, and Advanced React patterns
+               Build full-stack applications with cloud deployment, 
+              Gain practical experience in ML model development,
+               Explore NLP and Deep Learning projects, 
+               Master advanced data analytics and visualization techniques, 
+               Contribute to open-source projects for real-world experience
             </p>
           </div>
         </div>

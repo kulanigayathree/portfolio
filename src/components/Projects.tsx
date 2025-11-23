@@ -5,6 +5,7 @@ import portfolioImage from '../assets/images/portfolio.jpg';
 import jsonchatbotImage from '../assets/images/json_chatbot.jpg';
 import zenityImage from '../assets/images/zenity.jpg';
 import WeatherPipelineImage from '../assets/images/Weather Pipeline.jpg';
+import SentimentAnalyzerImage from '../assets/images/SentimentAnalyzer.jpg';
 import { Filter, Code, Palette, Brain, Globe, TrendingUp} from 'lucide-react';
 
 export const Projects = () => {
@@ -22,6 +23,24 @@ export const Projects = () => {
       status: 'Live',
       featured: true
     },
+     {
+      title: 'Weather Pipeline (Test API)',
+      description: 'A small project demonstrating a basic data pipeline that fetches weather data (or mock data), stores it in a SQLite database, and runs queries for analysis. Perfect for learning how to build an end-to-end data ingestion and storage pipeline using Python.',
+      image: WeatherPipelineImage,
+      tags: ['Python 3', 'Requests', 'Pandas', 'SQLite3', 'python-dotenv', 'Logging'],
+      category: 'Data Science',
+      githubLink: 'https://github.com/kulanigayathree/weather-pipeline-demo',
+      status: 'Complete'
+    },
+    {
+      title: 'Sentiment Analyzer',
+      description: 'It includes creating a small dataset, training a model, testing its accuracy, and making predictions on custom sentences.',
+      image: SentimentAnalyzerImage,
+      tags: ['Python', 'Pandas', 'Scikit-Learn'],
+      category: 'Data Science',
+      githubLink: 'https://github.com/kulanigayathree/SentimentAnalyzer',
+      status: 'Complete'
+    },
     {
       title: 'Soren - JSON Chatbot',
       description: 'An intelligent chatbot powered by JSON data structures. Soren can understand user queries and provide contextual responses by processing structured data, making conversations feel natural and informative.',
@@ -37,7 +56,7 @@ export const Projects = () => {
       description: 'A lightweight, interactive chatbot application with a clean web interface. Built using Python Flask backend with JavaScript frontend, offering real-time chat functionality and user-friendly interactions.',
       image: simpleChatbotImage,
       tags: ['Python', 'Flask', 'JavaScript', 'HTML', 'CSS'],
-      category: 'Web Development',
+      category: 'AI/ML',
       githubLink: 'https://github.com/kulanigayathree/Simple-chatbot-python-1',
       status: 'Completed'
     },
@@ -51,15 +70,6 @@ export const Projects = () => {
       githubLink: 'https://github.com/kulanigayathree/Figma-StressRelief/blob/main/ZENITY.fig',
       status: 'Design Complete'
     },
-    {
-      title: 'Weather Pipeline (Test API)',
-      description: 'A small project demonstrating a basic data pipeline that fetches weather data (or mock data), stores it in a SQLite database, and runs queries for analysis. Perfect for learning how to build an end-to-end data ingestion and storage pipeline using Python.',
-      image: WeatherPipelineImage,
-      tags: ['Python 3', 'Requests', 'Pandas', 'SQLite3', 'python-dotenv', 'Logging'],
-      category: 'Data Science',
-      githubLink: 'https://github.com/kulanigayathree/weather-pipeline-demo',
-      status: 'Complete'
-    }
   ];
 
   const categories = [

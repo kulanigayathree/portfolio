@@ -9,14 +9,15 @@ export const About = () => {
     programming: [
       { name: 'Introduction to C – Sololearn', image: './certificates/IntroC_Sololern.png' },
       { name: 'Introduction to C++ – Sololearn', image: './certificates/IntroC++_Sololearn.png' },
-      { name: 'Introduction to Java – Sololearn', image: './certificates/IntroJava_Sololearn.png' }
+      { name: 'Introduction to Java – Sololearn', image: './certificates/IntroJava_Sololearn.png' },
+      { name: 'Prompt Engineering – Sololearn', image: './certificates/Prompt_Engineering_Sololearn.png' }
+
     ],
     dataScience: [
-      { name: 'Introduction to Data Science – Cisco Networking Academy', image: './certificates/data-science-certificate.png' },
+      { name: 'Introduction to Data Science – Cisco Networking Academy', image: './certificates/CiscoAcademy Introduction to Data Science.png' },
+      { name: 'Introduction to Modern AI – Cisco Networking Academy', image: './certificates/IntroMorden_AI_CNA.png' },
       { name: 'Visualize Your Data – Sololearn', image: './certificates/Visualize_your_data_Sololearn.png' },
       { name: 'Coding for Data – Sololearn', image: './certificates/Coding_for_Data_Sololearn.png' },
-      { name: 'Introduction to Modern AI – Cisco Networking Academy', image: './certificates/IntroMorden_AI_CNA.png' },
-      { name: 'Prompt Engineering – Sololearn', image: './certificates/Prompt_Engineering_Sololearn.png' }
     ]
   };
 
@@ -70,7 +71,7 @@ export const About = () => {
                 My journey began with a fascination for how data can tell stories and drive meaningful decisions.
               </p>
               <p className="text-lg text-gray-800 leading-relaxed">
-                What excites me most is the intersection of technology and problem-solving—transforming raw data into actionable insights 
+                What excites me most is the intersection of technology and problem solving transforming raw data into actionable insights 
                 that can make a real difference. I believe in continuous learning and am always eager to take on new challenges that push my boundaries.
               </p>
             </div>
@@ -205,7 +206,7 @@ export const About = () => {
           </div>
           
           {/* 4 Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">   {/*change no of columns*/}
             
             {/* Box 1 - Programming Languages with Certificate Viewer */}
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-lg border border-blue-200 hover:shadow-lg transition-all duration-300 hover:scale-105 relative">
@@ -266,7 +267,7 @@ export const About = () => {
             </div>
             
             {/* Box 3 - Academic Projects (unchanged) */}
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-lg border border-purple-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
+            {/* <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-lg border border-purple-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
               <div className="flex items-center mb-4">
                 <GraduationCap className="text-purple-600 mr-2" size={20} />
                 <h5 className="font-bold text-gray-800">Academic Projects</h5>
@@ -285,7 +286,7 @@ export const About = () => {
                   System Analysis & Design
                 </li>
               </ul>
-            </div>
+            </div> */}
             
             {/* Box 4 - Personal Development (unchanged) */}
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-5 rounded-lg border border-orange-200 hover:shadow-lg transition-all duration-300 hover:scale-105">
